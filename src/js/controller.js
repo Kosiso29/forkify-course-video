@@ -129,6 +129,10 @@ const controlAddRecipe = async function (newRecipe) {
   };
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
 // this is a better way of writing an event listener which fires the same function
 // for some reason, parcel can't access array methods on array literals
 // ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
@@ -141,6 +145,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
 
